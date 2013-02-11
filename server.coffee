@@ -18,9 +18,22 @@ path = require("path")
 http = require('http')
 gzippo = require("gzippo")
 stylus = require('stylus')
+program = require('commander')
+
+program
+  .version('0.0.1')
+  .usage('[options] [dir|file ...]')
+  .option('-p, --port [number]', 'select port');
 
 # Server creation
+program.parse process.argv
 app = module.exports = express.createServer()
+
+# check port
+if program.port
+  port = program.port*1
+  if typeof port is 'number' and port > 79
+    process.env.PORT = program.port
 
 # set up some configuration variables:
 publicDir = __dirname + "/public"

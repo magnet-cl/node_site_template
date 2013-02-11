@@ -1,2 +1,19 @@
 #!/bin/bash
-./node_modules/coffee-script/bin/coffee server.coffee
+
+PORT_BOOL=false
+
+while getopts p: option
+do
+  case "${option}"
+  in
+    p)
+      PORT_BOOL=true
+      PORT_NUMBER=${OPTARG};;
+  esac
+done
+
+if $PORT_BOOL; then
+  ./node_modules/coffee-script/bin/coffee server.coffee -p ${PORT_NUMBER}
+else
+  ./node_modules/coffee-script/bin/coffee server.coffee
+fi
