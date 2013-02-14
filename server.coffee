@@ -23,7 +23,7 @@ program = require('commander')
 program
   .version('0.0.1')
   .usage('[options] [dir|file ...]')
-  .option('-p, --port [number]', 'select port');
+  .option('-p, --port [number]', 'select port')
 
 # Server creation
 program.parse process.argv
