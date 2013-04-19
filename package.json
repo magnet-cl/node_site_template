@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "./node_modules/coffee-script/bin/coffee --watch server.coffee"
   },
   "dependencies": {
     "bytes": "*",
