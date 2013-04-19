@@ -1,17 +1,19 @@
 {
-  "name": "project ESJ",
-  "version": "0.0.1",
+  "name": "Magnet-node_site_template",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0beta4",
-    "requireindex": "~1.0.0",
-    "connect-assets": "*",
-    "jade": "*",
+    "bytes": "*",
     "coffee-script": "*",
-    "stylus": "*",
-    "gzippo": "*"
+    "commander": "*",
+    "connect-assets": "*",
+    "express": "3.1.0",
+    "gzippo": "*",
+    "jade": "*",
+    "requireindex": "~1.0.0",
+    "stylus": "*"
   }
 }
